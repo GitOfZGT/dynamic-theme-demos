@@ -6,6 +6,9 @@ import Forms from "./components/forms.vue";
 import Table from "./components/table.vue";
 import Slider from "./components/slider.vue";
 import TimeLine from "./components/timeLine.vue";
+import Notification from "./components/notification.vue";
+import Modal from "./components/modal.vue";
+import Message from "./components/message.vue";
 import { toggleTheme } from "@zougt/vite-plugin-theme-preprocessor/dist/browser-utils";
 </script>
 
@@ -51,9 +54,21 @@ import { toggleTheme } from "@zougt/vite-plugin-theme-preprocessor/dist/browser-
         <a-alert style="margin-bottom: 10px" message="warning" type="warning" />
         <a-alert message="error" type="error" />
         <a-divider />
-
-        <a-divider
-      /></a-col>
+        <a-breadcrumb>
+          <a-breadcrumb-item>Home</a-breadcrumb-item>
+          <a-breadcrumb-item
+            ><a href="">Application Center</a></a-breadcrumb-item
+          >
+          <a-breadcrumb-item><a href="">Application List</a></a-breadcrumb-item>
+          <a-breadcrumb-item>An Application</a-breadcrumb-item>
+        </a-breadcrumb>
+        <a-divider />
+        <Notification />
+        <a-divider />
+        <Modal />
+        <a-divider />
+        <Message />
+      </a-col>
       <a-col :span="12"
         ><a-typography-title>Slider</a-typography-title>
         <Slider />

@@ -1,7 +1,7 @@
-# Vue 3 + Vite
+# 预设主题demo
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+vite + ant-design-vue 
 
-## Recommended IDE Setup
+![效果图](https://img-blog.csdnimg.cn/caa3ccb9949a4fc4a6a8c7442291ed07.gif)
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+using [@zougt/vite-plugin-theme-preprocessor](https://github.com/GitOfZGT/vite-plugin-theme-preprocessor)

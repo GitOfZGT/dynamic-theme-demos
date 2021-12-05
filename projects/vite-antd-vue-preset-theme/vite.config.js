@@ -7,6 +7,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  // base:"/dynamic-theme-demos/vite-antd-vue-preset-theme",
   css: {
     preprocessorOptions: {
       less: {
