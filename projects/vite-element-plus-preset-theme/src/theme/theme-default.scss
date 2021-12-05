@@ -1,10 +1,10 @@
-// @forward "element-plus/theme-chalk/src/common/var.scss" with (
-//   $colors: (
-//     "primary": (
-//       "base": #7546C9,
-//     ),
-//   )
-// );
+@forward "element-plus/theme-chalk/src/common/var.scss" with (
+  $colors: (
+    "primary": (
+      "base": #7546C9,
+    ),
+  )
+);
 
-@use 'element-plus/theme-chalk/src/common/var.scss' as *;
-$color-primary:#7546C9 !default;
+// @use 'element-plus/theme-chalk/src/common/var.scss' as *;
+// $color-primary:#7546C9 !default;

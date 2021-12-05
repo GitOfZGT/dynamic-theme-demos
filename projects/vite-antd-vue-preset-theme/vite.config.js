@@ -4,10 +4,10 @@ import { themePreprocessorPlugin } from "@zougt/vite-plugin-theme-preprocessor";
 import Components from "unplugin-vue-components/vite";
 import { AntDesignVueResolver } from "unplugin-vue-components/resolvers";
 import path from "path";
-
+import pack from './package.json';
 // https://vitejs.dev/config/
 export default defineConfig({
-  // base:"/dynamic-theme-demos/vite-antd-vue-preset-theme",
+  base: `/dynamic-theme-demos/${pack.name}`,
   css: {
     preprocessorOptions: {
       less: {

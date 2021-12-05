@@ -1,23 +1,25 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import { themePreprocessorPlugin } from "@zougt/vite-plugin-theme-preprocessor";
-import Components from "unplugin-vue-components/vite";
-import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 import path from "path";
-import pack from './package.json';
+import pack from "./package.json";
+
 // https://vitejs.dev/config/
 export default defineConfig({
   base: `/dynamic-theme-demos/${pack.name}`,
+  // css: {
+  //   preprocessorOptions: {
+  //     less: {
+  //       javascriptEnabled: true,
+  //     },
+  //   },
+  // },
   optimizeDeps: {
     //【注意】 排除 import { toggleTheme } from "@zougt/vite-plugin-theme-preprocessor/dist/browser-utils"; 在vite的缓存依赖
     exclude: ["@zougt/vite-plugin-theme-preprocessor/dist/browser-utils"],
   },
   plugins: [
     vue(),
-    Components({
-      // 按需导入element-plus组件
-      resolvers: [ElementPlusResolver({ importStyle: "sass" })],
-    }),
     themePreprocessorPlugin({
       scss: {
         // 是否启用任意主题色模式，这里不启用

@@ -1,0 +1,19 @@
+{
+  "name": "vite-scss-preset-theme",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "dayjs": "^1.10.7",
+    "vue": "^3.2.16"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.3",
+    "@zougt/vite-plugin-theme-preprocessor": "^1.4.0-beta.8",
+    "sass": "^1.44.0",
+    "vite": "^2.6.4"
+  }
+}
