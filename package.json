@@ -1,0 +1,10 @@
+{
+  "name": "dynamic-theme-demos",
+  "version": "1.0.0",
+  "description": "Very low cost dynamic themes in vite and Ant Design Vue",
+  "homepage": "https://gitofzgt.github.io/vite-dynamictheme-antd-vue-demo/",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {},
+  "browserlist": {}
+}
