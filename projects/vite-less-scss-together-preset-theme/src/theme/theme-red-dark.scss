@@ -1,0 +1,5 @@
+
+// 对应ant-design-vue 的less变量 @primary-color , 名称一致，只是 @ 与 $ 的区别
+// less 与 scss 混用，不能使用处理器专用的语法，否则就把less变量与scss变量分开文件写
+$primary-color: #ed0a5a !default;
+$body-background:#000 !default;

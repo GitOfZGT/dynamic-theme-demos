@@ -1,5 +1,5 @@
 {
-  "name": "vite-scss-preset-theme",
+  "name": "vite-less-scss-together-preset-theme",
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
@@ -7,6 +7,8 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@ant-design/icons-vue": "^6.0.1",
+    "ant-design-vue": "^2.2.8",
     "dayjs": "^1.10.7",
     "vue": "^3.2.16"
   },
@@ -14,6 +16,8 @@
     "@vitejs/plugin-vue": "^1.9.3",
     "@zougt/vite-plugin-theme-preprocessor": "^1.4.0",
     "sass": "^1.44.0",
+    "less": "^4.1.2",
+    "unplugin-vue-components": "^0.17.2",
     "vite": "^2.6.4"
   }
 }

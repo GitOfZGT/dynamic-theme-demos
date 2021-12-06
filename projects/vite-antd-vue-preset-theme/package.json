@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.9.3",
-    "@zougt/vite-plugin-theme-preprocessor": "^1.4.0-beta.8",
+    "@zougt/vite-plugin-theme-preprocessor": "^1.4.0",
     "unplugin-vue-components": "^0.17.2",
     "less": "^4.1.2",
     "vite": "^2.6.4"
