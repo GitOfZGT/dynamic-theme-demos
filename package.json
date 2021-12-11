@@ -4,7 +4,7 @@
   "description": "Very low cost dynamic themes in vite and Ant Design Vue",
   "homepage": "https://gitofzgt.github.io/vite-dynamictheme-antd-vue-demo/",
   "scripts": {},
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+  },
   "browserlist": {}
 }

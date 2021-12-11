@@ -89,7 +89,7 @@ export default defineConfig({
           },
         ],
         // // 默认取 multipleScopeVars[0].scopeName
-        // defaultScopeName: "",
+        defaultScopeName: "",
         // 在生产模式是否抽取独立的主题css文件，extract为true以下属性有效
         extract: false,
         // // 独立主题css文件的输出路径，默认取 viteConfig.build.assetsDir 相对于 (viteConfig.build.outDir)

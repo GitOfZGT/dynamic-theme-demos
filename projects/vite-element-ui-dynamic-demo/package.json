@@ -1,0 +1,33 @@
+{
+  "name": "vite-element-ui-dynamic-demo",
+  "version": "1.0.0",
+  "description": "Very low cost dynamic themes in vite and Ant Design Vue",
+  "homepage": "https://gitofzgt.github.io/vite-dynamictheme-antd-vue-demo/",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "color": "^3.2.1",
+    "dayjs": "^1.10.7",
+    "element-ui": "^2.15.6",
+    "vue": "^2.6.14"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.10",
+    "@types/tinycolor2": "^1.4.3",
+    "@vitejs/plugin-legacy": "^1.6.3",
+    "@vitejs/plugin-vue": "^1.9.3",
+    "@zougt/some-loader-utils": "^1.4.0",
+    "@zougt/vite-plugin-theme-preprocessor": "^1.4.0",
+    "regenerator-runtime": "^0.13.9",
+    "sass": "~1.32.13",
+    "sass-loader": "^10.2.0",
+    "unplugin-vue-components": "^0.17.2",
+    "vite": "^2.6.4",
+    "vite-plugin-vue2": "^1.4.0",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "browserlist": {}
+}
