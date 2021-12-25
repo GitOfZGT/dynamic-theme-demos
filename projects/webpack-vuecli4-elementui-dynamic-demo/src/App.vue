@@ -2,7 +2,10 @@
   <div id="app" style="padding: 20px">
     <h1 style="text-align: center">webapck + elment-ui 动态主题切换示例</h1>
     <div style="text-align: center">
-      <el-color-picker v-model="primaryColor"></el-color-picker>
+      <el-color-picker
+        v-model="primaryColor"
+        @active-change="colorChange"
+      ></el-color-picker>
     </div>
     <h3 class="sub-title" style="margin-bottom: 60px">
       这行文字是非组件库的颜色切换演示，之下是组件库的颜色切换
@@ -83,14 +86,15 @@ import Menu from "./components/menu.vue";
 import Message from "./components/message.vue";
 export default {
   name: "App",
-  components: { Forms, Menu ,Message},
+  components: { Forms, Menu, Message },
   data() {
     return {
       primaryColor: "#512da7",
     };
   },
-  watch: {
-    primaryColor(val) {
+
+  methods: {
+    colorChange(val) {
       setCustomTheme({
         Color,
         primaryColor: val,

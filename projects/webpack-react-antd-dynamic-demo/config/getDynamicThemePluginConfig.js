@@ -16,19 +16,19 @@ const multipleScopeVars = [
   },
 ];
 
-const customThemeOutputPath = path.resolve("src/themeMethods.js");
 function getThemeConfig(isEnvDevelopment) {
   return {
     resolve: {
       alias: {
-        "@setCustomTheme": isEnvDevelopment?customThemeOutputPath: "@zougt/theme-css-extract-webpack-plugin/dist/setCustomTheme.js",
+        "@setCustomTheme": "@zougt/theme-css-extract-webpack-plugin/dist/setCustomTheme.js",
       },
     },
+    // 添加less-loader的属性
     lessLoaderOptions: {
       lessOptions: {
         javascriptEnabled: true,
       },
-      // 给支持implementation的sass-loader添加
+      // 给支持implementation的less-loader添加
       implementation: getLess({
         // getMultipleScopeVars优先于 sassOptions.multipleScopeVars
         getMultipleScopeVars: () => multipleScopeVars,
@@ -37,8 +37,8 @@ function getThemeConfig(isEnvDevelopment) {
     module: {
       rules: [
         {
-          test: /themeMethods\.js$/,
-          enforce: "post",
+          test: /setCustomTheme\.js$/,
+          enforce: "pre",
           loader: require.resolve(
             "@zougt/theme-css-extract-webpack-plugin/dist/hot-loader/index.js"
           ),
@@ -49,14 +49,16 @@ function getThemeConfig(isEnvDevelopment) {
       new ThemeCssExtractWebpackPlugin({
         // 以下是任意主题模式的参数 arbitraryMode:true 有效
         arbitraryMode: true,
+        multipleScopeVars,
         // 默认主题色，与"src/theme/mauve-vars.scss"的@--color-primary主题色相同
         defaultPrimaryColor: "#512da7",
         hueDiffControls: {
           low: 2,
           high: 2,
         },
-        customThemeOutputPath: isEnvDevelopment ? customThemeOutputPath : "",
-        multipleScopeVars,
+        // 开发模式下，将动态生成的一个依赖js输出到src目录，用于触发热更新，默认在在node_modules范围内输出，但是create-react-app不会监听node_modules内的文件改变，https://github.com/facebook/create-react-app/issues/10475
+        customThemeOutputPath: isEnvDevelopment ?  path.resolve("src/setCustomThemeDep.js") : "",
+       
         // 【注意】includeStyleWithColors作用： css中不是由主题色变量生成的颜色，也让它抽取到主题css内，可以提高权重
         includeStyleWithColors: [
           {

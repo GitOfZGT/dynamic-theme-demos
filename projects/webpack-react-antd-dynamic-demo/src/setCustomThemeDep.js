@@ -70,9 +70,13 @@ function getSetNewThemeMethod(options) {
     Object.keys(hybridValueMap).forEach(function (temp) {
       var sourceValue = hybridValueMap[temp];
       var sourceColors = Object.keys(sourceColorMap);
-      var findColor = sourceColors.find(function (colorStr) {
-        return sourceValue.includes(colorStr);
-      });
+      var findColor = null;
+      for (var i = 0; i < sourceColors.length; i++) {
+        if (sourceValue.indexOf(sourceColors[i]) > -1) {
+          findColor = sourceColors[i];
+          break;
+        }
+      }
       if (findColor) {
         replaceHybridValueMap[sourceValue] = (
           targetValueReplacer[temp] || temp
@@ -153,13 +157,23 @@ function getSetNewThemeMethod(options) {
 var saveThemeOptions = {
   defaultPrimaryColor: "#512da7",
   primaryColor: "#512da7",
-  sourceThemeStyle: ".sub-title{color:#8c1a57}",
+  sourceThemeStyle: ".sub-title{color:#a896d3}.test-a{color:#36758e}",
   hybridValueMap: {},
   otherValues: [],
   sourceColorMap: {
-    "#8c1a57": {
+    "#a896d3": {
       percentGias: [
-        -0.272365072987813, -0.11463700234192055, 0.16167664670658669, 0,
+        -4.411512150775177e-16, 0.6042654028436021, -0.26347305389221554, 0,
+      ],
+      varColorString: "#512da7",
+      sourcePercentGias: [
+        -4.411512150775177e-16, 0.6042654028436021, -0.26347305389221554, 0,
+      ],
+      sourceVarColorString: "#512da7",
+    },
+    "#36758e": {
+      percentGias: [
+        0.2353834142956281, 0.15169706765181262, 0.1497005988023951, 0,
       ],
       varColorString: "#512da7",
     },
@@ -175,8 +189,8 @@ function setSaveThemeOptions(opt) {
  * @param {object} options
  * @param {function} options.Color  required , 传入即可， 来源： https://github.com/Qix-/color
  * @param {string} options.primaryColor 新的主题色,替换所有颜色
- * @param {object} [options.gradientReplacer={}] 存在多个梯度主色，可对应替换梯度主色
- * @param {object} [options.targetValueReplacer={"#8c1a57":"#8c1a57"}] 可用于非颜色值的替换，如"padding:10px;" 中的 "10px"，（如果是颜色值，则是精确替换颜色）
+ * @param {object} [options.gradientReplacer={"#512da7":"#512da7"}] 存在多个梯度主色，可对应替换梯度主色
+ * @param {object} [options.targetValueReplacer={"#a896d3":"#a896d3","#36758e":"#36758e"}] 可用于非颜色值的替换，如"padding:10px;" 中的 "10px"，（如果是颜色值，则是精确替换颜色）
  */
 function setCustomTheme(options) {
   setSaveThemeOptions(options);
@@ -184,4 +198,4 @@ function setCustomTheme(options) {
     saveThemeOptions
   );
 }
-export { setCustomTheme };
+export default setCustomTheme;

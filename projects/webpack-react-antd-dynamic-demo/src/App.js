@@ -2,8 +2,7 @@ import { useState, useCallback, useEffect } from "react";
 import "./App.less";
 // import { Button, Divider } from "antd";
 import { SketchPicker } from "react-color";
-import {setCustomTheme} from "./themeMethods";
-import {a} from './a'
+import setCustomTheme from "@setCustomTheme";
 import Color from "color";
 // import MenuCom from "./components/Menu";
 // import Forms from "./components/Forms";
@@ -17,7 +16,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    console.log(888)
+   
     setCustomTheme({
       Color,
       primaryColor: state.primaryColor.hex,
@@ -33,7 +32,7 @@ function App() {
         ></SketchPicker>
       </div>
       <h1 style={{ textAlign: "center" }}>
-        webpack+react+antd 动态主题切换示例 {a}
+        webpack+react+antd 动态主题切换示例
       </h1>
       <h3 className="sub-title" style={{ marginBottom: "100px" }}>
         这行文字是非组件库的颜色切换演示，之下是组件库的颜色切换

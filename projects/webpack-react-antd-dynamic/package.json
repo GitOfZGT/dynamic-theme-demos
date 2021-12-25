@@ -1,5 +1,5 @@
 {
-  "name": "webpack-react-antd",
+  "name": "webpack-react-antd-dynamic",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
