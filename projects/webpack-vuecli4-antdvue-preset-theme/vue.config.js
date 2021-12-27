@@ -25,7 +25,7 @@ const multipleScopeVars = [
   },
 ];
 const extract = process.env.NODE_ENV === 'production';
-const publicPath = "/";
+// const publicPath = "/";
 const publicPath = `/dynamic-theme-demos/${pack.name}`;
 const assetsDir = "assets";
 const extractCssOutputDir = `${assetsDir}/css`;

@@ -8,6 +8,9 @@ import pack from "./package.json";
 // https://vitejs.dev/config/
 export default defineConfig({
   base: `/dynamic-theme-demos/${pack.name}`,
+  server:{
+    port:3300
+  },
   css: {
     preprocessorOptions: {
       less: {

@@ -12,13 +12,6 @@ import legacy from "@vitejs/plugin-legacy";
 // https://vitejs.dev/config/
 export default defineConfig({
   base: `/dynamic-theme-demos/${pack.name}`,
-  server: {
-    port: 3300,
-    watch: {
-      // themePreprocessorHmrPlugin 热更新时必需的，希望监听setCustomTheme.js
-      ignored: ["!**/node_modules/**/setCustomTheme.js"],
-    },
-  },
   build: {
     outDir: "dist",
   },

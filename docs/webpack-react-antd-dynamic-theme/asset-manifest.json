@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/dynamic-theme-demos/webpack-react-antd-dynamic-theme/static/css/main.f6354927.css",
-    "main.js": "/dynamic-theme-demos/webpack-react-antd-dynamic-theme/static/js/main.c6e91b63.js",
-    "static/js/107.0e2b3c13.chunk.js": "/dynamic-theme-demos/webpack-react-antd-dynamic-theme/static/js/107.0e2b3c13.chunk.js",
+    "main.js": "/dynamic-theme-demos/webpack-react-antd-dynamic-theme/static/js/main.bc2f6966.js",
+    "static/js/166.ddbb69bd.chunk.js": "/dynamic-theme-demos/webpack-react-antd-dynamic-theme/static/js/166.ddbb69bd.chunk.js",
     "index.html": "/dynamic-theme-demos/webpack-react-antd-dynamic-theme/index.html",
     "main.f6354927.css.map": "/dynamic-theme-demos/webpack-react-antd-dynamic-theme/static/css/main.f6354927.css.map",
-    "main.c6e91b63.js.map": "/dynamic-theme-demos/webpack-react-antd-dynamic-theme/static/js/main.c6e91b63.js.map",
-    "107.0e2b3c13.chunk.js.map": "/dynamic-theme-demos/webpack-react-antd-dynamic-theme/static/js/107.0e2b3c13.chunk.js.map"
+    "main.bc2f6966.js.map": "/dynamic-theme-demos/webpack-react-antd-dynamic-theme/static/js/main.bc2f6966.js.map",
+    "166.ddbb69bd.chunk.js.map": "/dynamic-theme-demos/webpack-react-antd-dynamic-theme/static/js/166.ddbb69bd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f6354927.css",
-    "static/js/main.c6e91b63.js"
+    "static/js/main.bc2f6966.js"
   ]
 }

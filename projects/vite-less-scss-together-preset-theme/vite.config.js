@@ -15,10 +15,6 @@ export default defineConfig({
       },
     },
   },
-  optimizeDeps: {
-    //【注意】 排除 import { toggleTheme } from "@zougt/vite-plugin-theme-preprocessor/dist/browser-utils"; 在vite的缓存依赖
-    exclude: ["@zougt/vite-plugin-theme-preprocessor/dist/browser-utils"],
-  },
   plugins: [
     vue(),
     Components({
@@ -86,6 +82,9 @@ export default defineConfig({
         includeStyleWithColors: [
           {
             color: "#ffffff",
+          },
+          {
+            color: ["transparent","none"],
           },
         ],
         // // 默认取 multipleScopeVars[0].scopeName
