@@ -4,7 +4,7 @@ import { themePreprocessorPlugin } from "@zougt/vite-plugin-theme-preprocessor";
 import Components from "unplugin-vue-components/vite";
 import { AntDesignVueResolver } from "unplugin-vue-components/resolvers";
 import path from "path";
-import pack from './package.json';
+import pack from "./package.json";
 // https://vitejs.dev/config/
 export default defineConfig({
   base: `/dynamic-theme-demos/${pack.name}`,
@@ -51,10 +51,24 @@ export default defineConfig({
             path: path.resolve("src/theme/theme-red-dark.less"),
           },
         ],
-        // 【注意】 css中不是由主题色变量生成的颜色，也让它抽取到主题css内，可以提高权重
+        // 【注意】includeStyleWithColors作用： css中不是由主题色变量生成的颜色，也让它抽取到主题css内，可以提高权重
         includeStyleWithColors: [
           {
+            // color也可以是array，如 ["#ffffff","#000"]
             color: "#ffffff",
+            // 排除属性，如 不提取背景色的#ffffff
+            // excludeCssProps:["background","background-color"]
+            // 排除选择器，如 不提取以下选择器的 #ffffff
+            // excludeSelectors: [
+            //   ".ant-btn-link:hover, .ant-btn-link:focus, .ant-btn-link:active",
+            // ],
+          },
+          {
+            // @zougt/some-loader-utils v1.4.2 支持 "transparent" 、"none" 等等
+            color: ["transparent", "none"],
+            // excludeSelectors: [
+            //   ".ant-btn-link:hover, .ant-btn-link:focus, .ant-btn-link:active",
+            // ],
           },
         ],
         // // 默认取 multipleScopeVars[0].scopeName

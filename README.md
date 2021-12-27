@@ -10,5 +10,9 @@ projects/vite-scss-preset-theme ：没有用UI库的vite+scss [在线演示](htt
 
 ### 动态主题案例
 
-todo
+projects/vite-element-ui-dynamic-theme ： [在线演示](https://gitofzgt.github.io/dynamic-theme-demos/vite-element-ui-dynamic-theme/)
+
+projects/webpack-react-antd-dynamic-theme ： [在线演示](https://gitofzgt.github.io/dynamic-theme-demos/webpack-react-antd-dynamic-theme/)
+
+projects/webpack-vuecli4-elementui-dynamic-theme ：[在线演示](https://gitofzgt.github.io/dynamic-theme-demos/webpack-vuecli4-elementui-dynamic-theme/)
 
