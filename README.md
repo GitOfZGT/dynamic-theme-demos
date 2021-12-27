@@ -8,6 +8,8 @@ projects/vite-element-plus-preset-theme ： [在线演示](https://gitofzgt.gith
 
 projects/vite-scss-preset-theme ：没有用UI库的vite+scss [在线演示](https://gitofzgt.github.io/dynamic-theme-demos/vite-scss-preset-theme/)
 
+projects/webpack-vuecli4-antdvue-preset-theme [在线演示](https://gitofzgt.github.io/dynamic-theme-demos/webpack-vuecli4-antdvue-preset-theme/)
+
 ### 动态主题案例
 
 projects/vite-element-ui-dynamic-theme ： [在线演示](https://gitofzgt.github.io/dynamic-theme-demos/vite-element-ui-dynamic-theme/)
